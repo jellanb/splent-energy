@@ -110,6 +110,12 @@ a:focus {
   padding-left: 25px;
 }
 
+.header_section .img {
+  border-radius: 50px;
+  width:85px;
+  height:110px;
+}
+
 .navbar-brand span {
   font-weight: bold;
   color: #ffffff;
