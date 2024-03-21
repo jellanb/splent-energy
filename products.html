@@ -31,6 +31,14 @@
 </head>
 
 <body class="sub_page">
+
+<!--Add cart notificaion -->
+<div class="notification" id="cartNotification">
+  Se ha añadido un artículo al carrito.
+</div>
+<!--End cart notificaion -->
+
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a href="https://api.whatsapp.com/send?phone=964877520&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20punto%20de%20venta%20" class="float" target="_blank">
   <i class="fa fa-whatsapp my-float"></i>
@@ -53,7 +61,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
               <li class="nav-item ">
-                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="main.html">Inicio <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="products.html">Productos</a>
@@ -71,19 +79,48 @@
               </a>
             </div>-->
           </div>
+          <div class="cart">
+            <div class="cart-icon" onclick="mostrarCarrito()">
+              <img src="images/carro-de-la-carretilla.png" alt="Carrito de compras">
+              <span class="cart-notification" id="cartCounter">0</span>
+            </div>
+            <div class="cart-content" id="cartContent">
+              <!-- Contenido del carrito -->
+              <!-- Aquí puedes mostrar los elementos del carrito -->
+            </div>
+          </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
   </div>
-
   <!-- service section -->
   <section class="case_section layout_padding">
     <div class="container">
       <div class="heading_container">
+
+
+        <div id="navbarSupportedContent2">
+          <ul class="ul-products-categories">
+            <li class="ul-products-categories-item ">
+              <a class="a-products-categories" href="products-puntos-venta.html">Puntos de venta <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="ul-products-categories-item">
+              <a class="a-products-categories" href="products-cameras.html">Camaras de vigilacia <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="ul-products-categories-item">
+              <a class="a-products-categories" href="products-security.html">Alarmas de seguridad <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+
+
         <h2>
-          Tipos de puntos de ventas
+          Todos los productos
         </h2>
+
+
+
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4">
@@ -96,12 +133,9 @@
                 Impresora 80 mm
               </h5>
               <p>Precio: <b>35.000 CLP</b></p>
-              <a href="https://api.whatsapp.com/send?phone=964877520&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20punto%20de%20venta%20" target="_blank">
-                <span>
-                  Contáctanos
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
+              <div class="btn-box">
+                <button class="btn-dark" onclick="agregarAlCarrito(1000871)">Agregar al carro</button>
+              </div>
             </div>
           </div>
         </div>
@@ -127,12 +161,9 @@
                 </li>
               </ul>
               <p>Precio: <b>95.000 CLP</b></p>
-              <a href="https://api.whatsapp.com/send?phone=964877520&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20punto%20de%20venta%20" target="_blank">
-                <span>
-                  Contáctanos
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
+              <div class="btn-box">
+                <button class="btn-dark" onclick="agregarAlCarrito(1000872)">Agregar al carro</button>
+              </div>
             </div>
           </div>
         </div>
@@ -157,12 +188,9 @@
                 </li>
               </ul>
               <p>Precio: <b>110.000 CLP</b></p>
-              <a href="https://api.whatsapp.com/send?phone=964877520&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20punto%20de%20venta%20" target="_blank">
-                <span>
-                  Contáctanos
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
+              <div class="btn-box">
+                <button class="btn-dark" onclick="agregarAlCarrito(1000873)">Agregar al carro</button>
+              </div>
             </div>
           </div>
         </div>
@@ -198,12 +226,9 @@
                 </li>
               </ul>
               <p>Precio: <b>260.000 CLP</b></p>
-              <a href="https://api.whatsapp.com/send?phone=964877520&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20punto%20de%20venta%20" target="_blank">
-                <span>
-                  Contáctanos
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
+              <div class="btn-box">
+                <button class="btn-dark" onclick="agregarAlCarrito(1000874)">Agregar al carro</button>
+              </div>
             </div>
           </div>
         </div>
@@ -237,12 +262,9 @@
                 </li>
                 </ul>
                 <p>Precio: <b>280.000 CLP</b></p>
-                <a href="https://api.whatsapp.com/send?phone=964877520&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20punto%20de%20venta%20" target="_blank">
-                <span>
-                  Contáctanos
-                </span>
-                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                </a>
+                <div class="btn-box">
+                  <button class="btn-dark" onclick="agregarAlCarrito(1000875)">Agregar al carro</button>
+                </div>
               </div>
             </div>
           </div>
@@ -276,15 +298,175 @@
                   </li>
                 </ul>
                 <p>Precio: <b>310.000 CLP</b></p>
-                <a href="https://api.whatsapp.com/send?phone=964877520&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20punto%20de%20venta%20" target="_blank">
-                <span>
-                  Contáctanos
-                </span>
-                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                </a>
+                <div class="btn-box">
+                  <button class="btn-dark" onclick="agregarAlCarrito(1000876)">Agregar al carro</button>
+                </div>
               </div>
             </div>
           </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/kit%20de%20camaras%202.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Kit 4 camarás + dvr + elementos de instalación
+              </h5>
+              <ul style="text-align: start">
+                <li>
+                  4 camarás de 1080p, Led color 700TVL24 IR X.
+                </li>
+                <li>
+                  4 rollos de cables para cámaras plug y play y energia.
+                </li>
+                <li>
+                  4 puertos 12V/4000 Mah.
+                </li>
+                <li>
+                  4 soportes resistentes waterproof para cámaras.
+                </li>
+                <li>
+                  Disco duro 500gb.
+                </li>
+                <li>
+                  App de monitoreo desde cualquier dispositivo
+                </li>
+                <li>
+                  Instalación.
+                </li>
+              </ul>
+              <p>Precio: <b>210.000 CLP</b></p>
+              <div class="btn-box">
+                <button class="btn-dark" onclick="agregarAlCarrito(1000877)">Agregar al carro</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/kit-8-camaras.webp" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Kit 8 camarás + dvr + elementos de instalación
+              </h5>
+              <ul style="text-align: start">
+                <li>
+                  8 camarás de 1080p, Led color 700TVL24 IR X.
+                </li>
+                <li>
+                  8 rollos de cables para cámaras plug y play y energia.
+                </li>
+                <li>
+                  8 puertos 12V/4000 Mah.
+                </li>
+                <li>
+                  8 soportes resistentes waterproof para cámaras.
+                </li>
+                <li>
+                  Disco duro 500gb.
+                </li>
+                <li>
+                  App de monitoreo desde cualquier dispositivo
+                </li>
+                <li>
+                  Instalación.
+                </li>
+              </ul>
+              <p>Precio: <b>310.000 CLP</b></p>
+              <div class="btn-box">
+                <button class="btn-dark" onclick="agregarAlCarrito(1000878)">Agregar al carro</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/kit-4camaras-inalambricas-panel-solar.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Kit 4 camarás + AP + elementos de instalación
+              </h5>
+              <ul style="text-align: start">
+                <li>
+                  4 camarás de 1080p, con panel solar.
+                </li>
+                <li>
+                  4 cargadores para camaras.
+                </li>
+                <li>
+                  4 soportes resistentes waterproof para cámaras.
+                </li>
+                <li>
+                  4 memorias micro SD de 8gb.
+                </li>
+                <li>
+                  1 amplificar wifi a 150 mts2.
+                </li>
+                <li>
+                  App de monitoreo desde cualquier dispositivo.
+                </li>
+                <li>
+                  1 rollo de cable RJ45 de 20 mts.
+                </li>
+                <li>
+                  Instalación.
+                </li>
+              </ul>
+              <p>Precio: <b>353.000 CLP</b></p>
+              <div class="btn-box">
+                <button class="btn-dark" onclick="agregarAlCarrito(1000879)">Agregar al carro</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/alarma-seguridad.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Sistema de alarma de seguridad para el hogar o negocio.
+              </h5>
+              <ul style="text-align: start">
+                <li>
+                  panel principal para operar
+                </li>
+                <li>
+                  4 controlles para armar y desarmar
+                </li>
+                <li>
+                  7 sensores magneticos de apertura
+                </li>
+                <li>
+                  7 sensores de movimiento
+                </li>
+                <li>
+                  1 sirena de panico
+                </li>
+                <li>
+                  2 pulsores de armado y desarmado
+                </li>
+                <li>
+                  instalación
+                </li>
+              </ul>
+              <p>Precio: <b>260.000 CLP</b></p>
+              <div class="btn-box">
+                <button class="btn-dark" onclick="agregarAlCarrito(1000880)">Agregar al carro</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -313,7 +495,7 @@
               Links
             </h4>
             <div class="info_links">
-              <a class="" href="index.html">
+              <a class="" href="main.html">
                 Inicio
               </a>
               <a class="" href="products.html">
@@ -343,7 +525,7 @@
               <a href="tel:+56964877520">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                    +56 964877520
+                    +56 939528646
                   </span>
               </a>
               <a href="mailto:asistente.virtual@kpvtechsolutions.cl">
