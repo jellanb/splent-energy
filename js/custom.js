@@ -77,7 +77,14 @@ if  (cartInfo !== null) {
 }
 
 function mostrarCarrito() {
-    window.location.href = "cart-details.html"
+    let basePath = window.location.pathname
+    let path = basePath.substring(basePath.lastIndexOf('/'));
+    if (path === "/index.html") {
+        window.location.href = "pages/cart-details.html"
+    } else {
+        window.location.href = "cart-details.html"
+    }
+
     //cartContent.style.display = cartContent.style.display === 'block' ? 'none' : 'block';
 }
 
@@ -269,19 +276,18 @@ function handleClearCart() {
 
 function handlePayCart() {
     if (formValidation()) {
-        const rows = document.querySelectorAll('#tbody tr'); // Obtener todas las filas de la tabla
-
-        rows.forEach(row => {
-            const cells = row.querySelectorAll('td'); // Obtener todas las celdas de la fila
-            const rowData = {}; // Objeto para almacenar los datos de la fila
-
-            cells.forEach(cell => {
-                const columnName = cell.dataset.columnName; // Obtener el nombre de la columna (si es necesario)
-                const cellValue = cell.textContent; // Obtener el contenido de la celda
-                rowData[columnName] = cellValue; // Asignar el valor de la celda al objeto de datos de la fila
+        if (JSON.parse(localStorage.getItem('items')) !== null) {
+            const cartInfo = JSON.parse(localStorage.getItem('items'));
+            let mensaje = "Hola Asistente virtual de KPC Tech solution, estoy interesado en los productos"
+            cartInfo.forEach((product) => {
+                mensaje.concat(",", product.description, "de precio", product.price)
             });
-
-            console.log(rowData); // Imprimir los datos de la fila
-        });
+            let telefono = "939528646"; // Número de teléfono al que quieres enviar el mensaje
+            let mensajeCodificado = encodeURIComponent(mensaje);
+            let url = "https://wa.me/" + telefono + "?text=" + mensajeCodificado;
+            window.location.href = url;
+        } else {
+           console.log("Carro vacio")
+        }
     }
 }

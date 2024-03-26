@@ -148,8 +148,8 @@ a:focus {
 
 .cart {
   position: relative;
-  /*display: inline-block;*/
-  display: none;
+  display: inline-block;
+  /*display: none;*/
 }
 
 .cart-icon {
