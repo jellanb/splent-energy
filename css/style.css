@@ -33,7 +33,7 @@ body {
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
   height: 5vh; /* Establece la altura del contenedor al 100% del viewport height */
-  background: #1A545B;
+  background: #3F840B;
   border-radius: 20px; /* Radio de las esquinas */
 }
 
@@ -133,7 +133,7 @@ a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #1A545B;
+  background-color: #3F840B;
   border-radius: 0 0 350px 0;
 }
 
@@ -313,7 +313,7 @@ a:focus {
 
 .header_section .img {
   border-radius: 50px;
-  width:85px;
+  width:185px;
   height:110px;
 }
 
@@ -682,7 +682,7 @@ a:focus {
 }
 
 .about_section {
-  background-color: #1A545B;
+  background-color: #3F840B;
   color: #ffffff;
   border-radius: 250px 0 250px 0;
 }
@@ -926,7 +926,7 @@ a:focus {
 }
 
 .footer_container {
-  background-color: #1A545B;
+  background-color: #3F840B;
   color: #ffffff;
   border-radius: 350px 0 0 0;
   padding-top: 145px;

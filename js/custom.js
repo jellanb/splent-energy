@@ -202,7 +202,6 @@ let totalPrice = 0;
 if (localStorage.getItem('items') !== null) {
     const cartInfo = JSON.parse(localStorage.getItem('items'));
     cartInfo.forEach(data => {
-        console.log(data)
         totalPrice += data.price;
         const fila = document.createElement('tr'); // Crear una fila
 
@@ -276,7 +275,8 @@ function handleClearCart() {
 
 function handlePayCart() {
     if (formValidation()) {
-        if (JSON.parse(localStorage.getItem('items')) !== null) {
+        sendWhatsAppMessage();
+        /*if (JSON.parse(localStorage.getItem('items')) !== null) {
             const cartInfo = JSON.parse(localStorage.getItem('items'));
             let mensaje = "Hola Asistente virtual de KPC Tech solution, estoy interesado en los productos"
             cartInfo.forEach((product) => {
@@ -288,6 +288,20 @@ function handlePayCart() {
             window.location.href = url;
         } else {
            console.log("Carro vacio")
-        }
+        }*/
     }
+}
+
+function sendWhatsAppMessage() {
+    const cartInfo = JSON.parse(localStorage.getItem('items'));
+    let productsText = "Hola quiero informacion para esta lista de Productos:\n";
+    cartInfo.forEach(data => {
+        productsText += data.description + "\n";
+        productsText += data.price + "\n";
+    });
+
+    const phoneNumber = "+573219146901"; // Reemplaza con el número de teléfono destino
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(productsText)}`;
+
+    window.open(whatsappUrl, '_blank');
 }
