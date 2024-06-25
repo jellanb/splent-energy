@@ -276,7 +276,8 @@ function handleClearCart() {
 
 function handlePayCart() {
     if (formValidation()) {
-        if (JSON.parse(localStorage.getItem('items')) !== null) {
+        window.location.href = "../pages/mercado-pago-checkout.html"
+        /*if (JSON.parse(localStorage.getItem('items')) !== null) {
             const cartInfo = JSON.parse(localStorage.getItem('items'));
             let mensaje = "Hola Asistente virtual de KPC Tech solution, estoy interesado en los productos"
             cartInfo.forEach((product) => {
@@ -288,6 +289,6 @@ function handlePayCart() {
             window.location.href = url;
         } else {
            console.log("Carro vacio")
-        }
+        }*/
     }
 }
