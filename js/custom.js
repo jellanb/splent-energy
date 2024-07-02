@@ -286,6 +286,7 @@ function rendererProducts(basePath) {
     let path = basePath.substring(basePath.lastIndexOf('/'));
     console.log(path);
     if (path === "/products.html") {
+        console.log("if valido para:", path);
         let rowsStart = 0;
         let rowsEnd = 3;
         for (const product of PRODUCTSLIST) {
@@ -303,15 +304,18 @@ function rendererProducts(basePath) {
         }
     }
     if (path === "/products-puntos-venta.html") {
+        console.log("if valido para:", path);
         loadProductsRow(PRODUCTSLIST.filter((prod) => prod.type === "liquids"));
     }
     if (path === "/products-cameras.html") {
         loadProductsRow(PRODUCTSLIST.filter((prod) => prod.type === "liquids"));
     }
     if (path === "/products-security.html") {
+        console.log("if valido para:", path);
         loadProductsRow(PRODUCTSLIST.filter((prod) => prod.type === "liquids"));
     }
     if (path === "/purgants.html") {
+        console.log("if valido para:", path);
         loadProductsRow(PRODUCTSLIST.filter((prod) => prod.type === "liquids"));
     }
 }
