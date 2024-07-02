@@ -415,5 +415,9 @@ function rendererCarDetails(basePath) {
     }
 }
 
-rendererProducts(window.location.pathname);
-rendererCarDetails(window.location.pathname);
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('El DOM está completamente cargado y parseado');
+    rendererProducts(window.location.pathname);
+    rendererCarDetails(window.location.pathname);
+});
+
