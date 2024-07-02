@@ -284,6 +284,7 @@ function renderPagination() {
 
 function rendererProducts(basePath) {
     let path = basePath.substring(basePath.lastIndexOf('/'));
+    console.log(path);
     if (path === "/products.html") {
         let rowsStart = 0;
         let rowsEnd = 3;
