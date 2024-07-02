@@ -72,7 +72,7 @@
                     </div>-->
                 </div>
                 <div class="cart">
-                    <div class="cart-icon" onclick="mostrarCarrito()">
+                    <div class="cart-icon" onclick="showCar()">
                         <img src="../images/carro-de-la-carretilla.png" alt="Carrito de compras">
                         <span class="cart-notification" id="cartCounter">0</span>
                     </div>
@@ -141,13 +141,10 @@
 
                             <label for="telefono">Teléfono:</label>
                             <input type="tel" id="telefono" name="telefono" required>
-
-                            <label for="telefono">Región:</label>
-                            <input type="tel" id="region" name="region" value="Región Metropolitana" required>
                         </div>
                     </form>
                 </div>
-                <button onclick="handlePayCart()" type="button" class="btn btn-light">Pagar</button>
+                <button onclick="handlePayCart()" type="button" class="btn btn-light">Solicitar productos</button>
                 <button onclick="handleClearCart()" type="button" class="btn btn-light">Vaciar Carrito</button>
             </div>
         </div>

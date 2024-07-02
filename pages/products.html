@@ -79,16 +79,16 @@
               </a>
             </div>-->
           </div>
-          <!--<div class="cart">
-            <div class="cart-icon" onclick="mostrarCarrito()">
+          <div class="cart">
+            <div class="cart-icon" onclick="showCar()">
               <img src="../images/carro-de-la-carretilla.png" alt="Carrito de compras">
               <span class="cart-notification" id="cartCounter">0</span>
             </div>
             <div class="cart-content" id="cartContent">
-              &lt;!&ndash; Contenido del carrito &ndash;&gt;
-              &lt;!&ndash; Aquí puedes mostrar los elementos del carrito &ndash;&gt;
+              <!-- Contenido del carrito -->
+              <!-- Aquí puedes mostrar los elementos del carrito -->
             </div>
-          </div>-->
+          </div>
         </nav>
       </div>
     </header>
@@ -121,11 +121,15 @@
         <h2>
           Todos los productos
         </h2>
-
-
-
       </div>
-      <div class="row">
+      <div>
+        <table>
+          <tbody id="tbody-products">
+
+          </tbody>
+        </table>
+      </div>
+      <!--<div class="row">
         <div class="col-md-6 col-lg-4">
           <div class="box">
             <div class="img-box">
@@ -137,7 +141,7 @@
               </h5>
               <p>Precio: <b>155.000 CLO</b></p>
               <div class="btn-box">
-                <button class="btn-dark" onclick="agregarAlCarrito(1000871)">Agregar al carro</button>
+                <button class="btn-dark" onclick="addToCar(1000871)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -154,7 +158,7 @@
               </h5>
               <p>Precio: <b>155.000 CLO</b></p>
               <div class="btn-box">
-                <button class="btn-dark" onclick="agregarAlCarrito(1000872)">Agregar al carro</button>
+                <button class="btn-dark" onclick="addToCar(1000872)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -170,7 +174,7 @@
               </h5>
               <p>Precio: <b>155.000 CLO</b></p>
               <div class="btn-box">
-                <button class="btn-dark" onclick="agregarAlCarrito(1000873)">Agregar al carro</button>
+                <button class="btn-dark" onclick="addToCar(1000873)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -188,7 +192,7 @@
               </h5>
               <p>Precio: <b>155.000 CLO</b></p>
               <div class="btn-box">
-                <button class="btn-dark" onclick="agregarAlCarrito(1000874)">Agregar al carro</button>
+                <button class="btn-dark" onclick="addToCar(1000874)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -204,7 +208,7 @@
                 </h5>
                 <p>Precio: <b>280.000 CLP</b></p>
                 <div class="btn-box">
-                  <button class="btn-dark" onclick="agregarAlCarrito(1000875)">Agregar al carro</button>
+                  <button class="btn-dark" onclick="addToCar(1000875)">Agregar al carro</button>
                 </div>
               </div>
             </div>
@@ -220,7 +224,7 @@
                 </h5>
                 <p>Precio: <b>155.000 CLP</b></p>
                 <div class="btn-box">
-                  <button class="btn-dark" onclick="agregarAlCarrito(1000876)">Agregar al carro</button>
+                  <button class="btn-dark" onclick="addToCar(1000876)">Agregar al carro</button>
                 </div>
               </div>
             </div>
@@ -238,7 +242,7 @@
               </h5>
               <p>Precio: <b>155.000 CLO</b></p>
               <div class="btn-box">
-                <button class="btn-dark" onclick="agregarAlCarrito(1000877)">Agregar al carro</button>
+                <button class="btn-dark" onclick="addToCar(1000877)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -254,7 +258,7 @@
               </h5>
               <p>Precio: <b>25.000 CLO</b></p>
               <div class="btn-box">
-                <button class="btn-dark" onclick="agregarAlCarrito(1000878)">Agregar al carro</button>
+                <button class="btn-dark" onclick="addToCar(1000878)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -270,7 +274,7 @@
               </h5>
               <p>Precio: <b>25.000 CLP</b></p>
               <div class="btn-box">
-                <button class="btn-dark" onclick="agregarAlCarrito(1000879)">Agregar al carro</button>
+                <button class="btn-dark" onclick="addToCar(1000879)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -288,12 +292,12 @@
               </h5>
               <p>Precio: <b>155.000 CLO</b></p>
               <div class="btn-box">
-                <button class="btn-dark" onclick="agregarAlCarrito(1000880)">Agregar al carro</button>
+                <button class="btn-dark" onclick="addToCar(1000880)">Agregar al carro</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </section>
   <!-- end service section -->
@@ -397,7 +401,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">KPV Tech solutions</a>
+        <a href="https://html.design/">Suplent Energy</a>
       </p>
     </div>
   </footer>
